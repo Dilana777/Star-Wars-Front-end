@@ -5,15 +5,16 @@ import "../../styles/home.scss";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 
-export const Card = props => {
+export const Card = (props, i) => {
 	const { store, actions } = useContext(Context);
-
+	console.log(i);
 	return (
 		<div>
 			<div
-				className="card "
+				className="card " //class card
 				style={{ color: "white", width: "15rem", height: "20rem", backgroundColor: "rgb(121, 104, 9)" }}>
-				<img className="card-img-top" src={rigoImage} alt="Card image cap" height="125" />
+				<img className="card-img-top" src={props.imgUrl} alt="Card image cap" height="125" />
+
 				<div className="card-body">
 					<h5 className="card-title">{props.title}</h5>
 					<p className="card-text margen">
@@ -54,5 +55,6 @@ Card.propTypes = {
 	eye: PropTypes.string,
 	uid: PropTypes.string,
 	url: PropTypes.string,
-	index: PropTypes.numbre
+	index: PropTypes.number,
+	imgUrl: PropTypes.string.isRequired
 };

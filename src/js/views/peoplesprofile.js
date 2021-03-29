@@ -11,13 +11,14 @@ export const Peoplesprofile = props => {
 	return (
 		<div className="container-fluid">
 			{store.peoples.map((items, i) => {
+				let m = i;
 				if (i + 1 == params.theid) {
 					return (
 						<div className="jumbotron top1">
 							<div className="row">
 								<div className="col-3">
 									<img
-										src={rigoImage}
+										src={store.img[m]}
 										className=""
 										alt="Responsive image"
 										width="290px"

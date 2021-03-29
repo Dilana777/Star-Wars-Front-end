@@ -17,7 +17,7 @@ export const Planetsprofile = props => {
 							<div className="row">
 								<div className="col-3">
 									<img
-										src={rigoImage}
+										src={store.imgP[i]}
 										className=""
 										alt="Responsive image"
 										width="290px"

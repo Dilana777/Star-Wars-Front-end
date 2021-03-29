@@ -30,6 +30,7 @@ export const Navbar = props => {
 					<Dropdown>
 						<Dropdown.Toggle variant="info" id="dropdown-basic">
 							Favoritos <i className="fas fa-eye" />
+							{store.favoritos.length}
 						</Dropdown.Toggle>
 						<Dropdown.Menu>
 							{store.favoritos.map((items, i) => {

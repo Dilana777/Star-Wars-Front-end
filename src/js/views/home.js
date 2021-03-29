@@ -15,6 +15,7 @@ export const Home = () => {
 		actions.getPlanets();
 		actions.getPeoples();
 	}, []);
+	//crea vector imgs
 
 	return (
 		<div className="container-fluid ">
@@ -33,7 +34,14 @@ export const Home = () => {
 										index={i + 1}
 										eye={items.eye_color}
 										url={items.url}
-
+										imgUrl={store.img[i]}
+										/*<img
+										src={store.img[m]}
+										className=""
+										alt="Responsive image"
+										width="290px"
+										height="230px"
+									/>*/
 										//gender={store.people1.gender}
 										//hair={store.people1.hair_color}
 										//eye={store.people1.eye_color}
@@ -58,6 +66,7 @@ export const Home = () => {
 										terrain={items.terrain}
 										population={items.population}
 										index={i + 1}
+										urlImgP={store.imgP[i]}
 									/>
 								</div>
 							);
